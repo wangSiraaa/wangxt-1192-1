@@ -64,12 +64,16 @@ services:
     ports:
       - "${WEB_PORT}:8080"
     environment:
-      - VUE_APP_API_BASE_URL=http://localhost:${API_PORT}/api
+      - VUE_APP_API_BASE_URL=http://backend:3000/api
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
-      - backend
+      backend:
+        condition: service_started
     volumes:
       - ./frontend:/app
       - /app/node_modules
+    stdin_open: true
+    tty: true
 
 volumes:
   postgres_data:
