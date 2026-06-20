@@ -28,7 +28,7 @@
             <span>首页概览</span>
           </el-menu-item>
           <el-menu-item index="/map">
-            <el-icon><Map /></el-icon>
+            <el-icon><MapLocation /></el-icon>
             <span>地图监控</span>
           </el-menu-item>
           <template v-if="showInspectorMenu">
@@ -86,7 +86,7 @@
 import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { ElMessage, ElMessageBox } from 'element-plus';
-import { Position, SwitchButton, DataAnalysis, Map, EditPen, TrendCharts, Operation, SetUp, Document } from '@element-plus/icons-vue';
+import { Position, SwitchButton, DataAnalysis, MapLocation, EditPen, TrendCharts, Operation, SetUp, Document } from '@element-plus/icons-vue';
 import { useAuthStore } from '../stores/auth';
 
 const router = useRouter();

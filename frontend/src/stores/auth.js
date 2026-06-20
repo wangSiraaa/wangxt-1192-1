@@ -4,7 +4,7 @@ import { login, getCurrentUser } from '../api/auth';
 
 export const useAuthStore = defineStore('auth', () => {
   const token = ref(localStorage.getItem('token') || '');
-  const user = ref(JSON.parse(localStorage.getItem('user') || 'null');
+  const user = ref(JSON.parse(localStorage.getItem('user') || 'null'));
 
   const isAuthenticated = computed(() => !!token.value);
 
